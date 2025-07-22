@@ -23,21 +23,21 @@ const AboutSection = () => {
               Instead, DockerLabs provides:
             </p>
             
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <div className="flex items-center space-x-4">
-                <div className="w-3 h-3 rounded-full bg-primary shadow-glow"></div>
+            <div className="grid md:grid-cols-1 gap-4 mb-6">
+              <div className="flex items-start space-x-4">
+                <div className="w-3 h-3 rounded-full bg-primary shadow-glow mt-2 flex-shrink-0"></div>
                 <span className="text-card-foreground">Pre-configured container environments</span>
               </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-3 h-3 rounded-full bg-secondary shadow-glow"></div>
+              <div className="flex items-start space-x-4">
+                <div className="w-3 h-3 rounded-full bg-secondary shadow-glow mt-2 flex-shrink-0"></div>
                 <span className="text-card-foreground">Easy access via a desktop GUI launcher (.deb)</span>
               </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-3 h-3 rounded-full bg-primary shadow-glow"></div>
+              <div className="flex items-start space-x-4">
+                <div className="w-3 h-3 rounded-full bg-primary shadow-glow mt-2 flex-shrink-0"></div>
                 <span className="text-card-foreground">Ready-to-run labs in Networking, Security, Blockchain</span>
               </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-3 h-3 rounded-full bg-secondary shadow-glow"></div>
+              <div className="flex items-start space-x-4">
+                <div className="w-3 h-3 rounded-full bg-secondary shadow-glow mt-2 flex-shrink-0"></div>
                 <span className="text-card-foreground">Python, DevOps, and more</span>
               </div>
             </div>

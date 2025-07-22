@@ -39,6 +39,7 @@ const HeroSection = () => {
           <Button 
             size="lg" 
             className="bg-primary text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl shadow-glow hover:shadow-glow-intense transition-all duration-300 neon-flicker group"
+            onClick={() => window.open('https://github.com/Ammar2123/DockerLab/releases/tag/v1.0', '_blank')}
           >
             <Download className="w-6 h-6 mr-3 group-hover:animate-bounce" />
             Download Desktop App (.deb)

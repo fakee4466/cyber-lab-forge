@@ -30,9 +30,6 @@ const DeveloperSection = () => {
           Developer <span className="text-primary">Credits</span>
         </h2>
         
-        <p className="text-xl text-center text-muted-foreground mb-16 animate-fade-in delay-200">
-          "Both developers contributed equally to the containers and the application."
-        </p>
         
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {developers.map((dev, index) => (
