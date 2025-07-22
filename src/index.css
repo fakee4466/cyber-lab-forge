@@ -2,95 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* DockerLabs Cyber Glow Design System
+All colors MUST be HSL. Theme: Cyber Glow / Modern Matrix
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Cyber Glow Theme Colors */
+    --background: 0 0% 5%; /* #0d0d0d Near Black */
+    --foreground: 0 0% 90%; /* #e6e6e6 Light text */
+    
+    /* Glow Accents */
+    --primary: 162 93% 42%; /* #14f195 Neon Mint */
+    --primary-foreground: 0 0% 5%;
+    --glow: 162 93% 42%; /* Neon Mint Glow */
+    
+    /* Docker Blue Secondary */
+    --secondary: 218 90% 56%; /* #1f6feb Docker Blue */
+    --secondary-foreground: 0 0% 90%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Cards with Subtle Glow */
+    --card: 0 0% 8%; /* Slightly lighter than background */
+    --card-foreground: 0 0% 90%;
+    --card-glow: 162 93% 42%; /* Neon mint glow for cards */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 90%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Muted/Subtle Colors */
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 162 93% 42%; /* Neon Mint accent */
+    --accent-foreground: 0 0% 5%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 90%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders with Glow Effect */
+    --border: 0 0% 15%;
+    --border-glow: 162 93% 42%;
+    --input: 0 0% 12%;
+    --ring: 162 93% 42%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Gradients */
+    --gradient-cyber: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    
+    /* Shadows with Glow */
+    --shadow-glow: 0 0 30px hsl(var(--glow) / 0.3);
+    --shadow-intense: 0 0 50px hsl(var(--glow) / 0.5);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --flicker-duration: 1.5s;
   }
 
+  /* Dark mode uses same cyber theme */
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 0 0% 5%;
+    --foreground: 0 0% 90%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 90%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 90%;
+    --primary: 162 93% 42%;
+    --primary-foreground: 0 0% 5%;
+    --secondary: 218 90% 56%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 162 93% 42%;
+    --accent-foreground: 0 0% 5%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 90%;
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 162 93% 42%;
   }
 }
 
@@ -100,6 +90,58 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-mono;
+    background-image: radial-gradient(circle at 25% 25%, hsl(var(--glow) / 0.1) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 75%, hsl(var(--secondary) / 0.1) 0%, transparent 50%);
   }
+  
+  /* Cyber Glow Effects */
+  .glow {
+    box-shadow: 0 0 20px hsl(var(--glow) / 0.4);
+  }
+  
+  .glow-intense {
+    box-shadow: 0 0 40px hsl(var(--glow) / 0.6);
+  }
+  
+  /* Neon Flicker Animation */
+  .neon-flicker {
+    animation: neon-flicker var(--flicker-duration) infinite alternate;
+  }
+  
+  /* Matrix-style particles */
+  .particles {
+    background-image: radial-gradient(2px 2px at 20px 30px, hsl(var(--glow) / 0.3), transparent),
+                      radial-gradient(2px 2px at 40px 70px, hsl(var(--secondary) / 0.3), transparent),
+                      radial-gradient(1px 1px at 90px 40px, hsl(var(--glow) / 0.2), transparent),
+                      radial-gradient(1px 1px at 130px 80px, hsl(var(--secondary) / 0.2), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+  }
+}
+
+@keyframes neon-flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: 
+      0 0 5px hsl(var(--glow) / 0.8),
+      0 0 10px hsl(var(--glow) / 0.6),
+      0 0 15px hsl(var(--glow) / 0.4),
+      0 0 20px hsl(var(--glow) / 0.2);
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
 }
